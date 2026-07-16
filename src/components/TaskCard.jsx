@@ -49,21 +49,21 @@ export default function TaskCard({task, date, isLastAdded, activeSearch, deleteT
                     
                     {!isItDue && <>
                         <button 
-                            className="px-10 py-3 hover:scale-105 transition-all ease-in-out duration-300 rounded-t-2xl sm:rounded-tl-2xl bg-blue-500"
+                            className="px-10 py-3 hover:scale-103 transition-all border-b ease-in-out duration-300 rounded-t-2xl sm:rounded-tl-2xl bg-blue-500"
                             onClick={()=> {editTask(task.id, ref)}}
                             >
                                 {task.isBeingEdited ? "Save" :"Edit"}
                             </button>
 
                             <button 
-                            className="px-10 border-y py-3 hover:scale-105 transition-all ease-in-out duration-300 bg-blue-500"
+                            className="px-10 border-y py-3 hover:scale-103 transition-all ease-in-out duration-300 bg-blue-500"
                             onClick={()=>{completeTask(task.id)}}>
                                 Complete
                         </button>
                     </>}
                     
                     <button 
-                    className={clsx("px-10 py-3 hover:scale-105 transition-all ease-in-out duration-300 bg-[rgb(197,30,58)] sm:rounded-b-2xl",isItDue && 'sm:rounded-2xl')}
+                    className={clsx("px-10 py-3 hover:scale-103 transition-all ease-in-out duration-300 border-t bg-[rgb(197,30,58)] sm:rounded-b-2xl",isItDue && 'sm:rounded-2xl')}
                     onClick={()=>{deleteTask(task.id)}}>
                         Delete
                     </button>

@@ -14,4 +14,4 @@ A React to-do app with inline editing, due dates, and persisted storage.
 React 19 · Tailwind CSS · Vite
 
 ## Live demo
-https://to-do-list-mohamed501.vercel.app/
+https://to-do-list-md.vercel.app/

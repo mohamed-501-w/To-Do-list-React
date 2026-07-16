@@ -21,7 +21,7 @@ function App({darkMode}) {
 
   // const [tasks, setTasks] = useState(tasksData)
   const [activeSearch, setActiveSearch] = useState("") 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   let taskAddedIdRef = useRef(null)
   

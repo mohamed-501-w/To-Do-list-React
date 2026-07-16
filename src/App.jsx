@@ -10,7 +10,7 @@ import {tasksData} from '../data/data'
 
 
 
-function App({darkMode}) {
+function App() {
   const [tasks, setTasks] = useState(() => {
   try {
     return JSON.parse(localStorage.getItem('tasks')) ?? []

@@ -7,7 +7,7 @@ export default function TaskInput({addTask ,date}){
 
                 <button 
                     type="submit" 
-                    className=" peer px-8 tracking-widest py-2  bg-[rgb(197,30,58)] text-neutral-300  font-black text-lg rounded-xl shadow-md shadow-gray-900/70"
+                    className=" peer px-8 tracking-widest py-2  bg-[rgb(197,30,58)] text-neutral-300  font-black text-lg rounded-xl shadow-md shadow-gray-500/50"
                     >ADD
                 </button>
 

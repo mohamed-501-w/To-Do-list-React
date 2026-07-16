@@ -139,7 +139,8 @@ function App() {
       isDarkMode={isDarkMode}
       darkMode={darkMode}/>
       <Search 
-      searchTask={searchTask}/>
+      searchTask={searchTask}
+      activeSearch={activeSearch}/>
       <TaskInput 
       addTask={addTask}
       date={date}

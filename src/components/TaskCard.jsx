@@ -20,13 +20,13 @@ export default function TaskCard({task, date, isLastAdded, activeSearch, deleteT
             
             
             <textarea
-            ref={ref}
-            type="text"  
-            onChange={(event) => editing(event, task.id) } 
-            value={inputValue}
-            readOnly={!task.isBeingEdited}
-            maxLength={100}
-            className={clsx("resize-none w-full text-ellipsis field-sizing-content text-wrap flex-1 text-xl sm:mr-auto  overflow-x-auto  mt-auto outline-0 py-4 px-2 mb-4 font-bold caret-[rgb(197,30,58)] rounded-xl", task.isCompleted && "line-through opacity-50 decoration-2", task.isBeingEdited && "border-2 border-[rgb(197,30,58)] bg-red-200 rounded-xl shadow-md shadow-gray-500/50", isHighlighted && "bg-red-400", isItDue && "line-through decoration-3 opacity-80 decoration-red-600")}
+                ref={ref}
+                type="text"  
+                onChange={(event) => editing(event, task.id) } 
+                value={inputValue}
+                readOnly={!task.isBeingEdited}
+                maxLength={100}
+                className={clsx("resize-none w-full text-ellipsis field-sizing-content text-wrap flex-1 text-xl sm:mr-auto  overflow-x-auto  mt-auto outline-0 py-4 px-2 mb-4 font-bold caret-[rgb(197,30,58)] rounded-xl", task.isCompleted && "line-through opacity-50 decoration-2", task.isBeingEdited && "border-2 border-[rgb(197,30,58)] rounded-xl shadow-md shadow-gray-500/50", isHighlighted && "text-neutral-300 bg-[rgb(197,30,58)]", isItDue && "line-through decoration-3 opacity-80 decoration-red-600")}
             />
 
         <div 
@@ -45,7 +45,7 @@ export default function TaskCard({task, date, isLastAdded, activeSearch, deleteT
                     <span className="bg-gray-800 dark:bg-[rgb(197,30,58)] size-1 rounded-full mb-1"></span>
                 </button>
                 <div 
-                className="peer-focus:flex animate-fadeIn [animation-duration:0.2s] hover:flex hidden fixed sm:w-auto w-screen bottom-0 right-0 sm:absolute  sm:right-8 sm:top-8  z-10 flex-col  tracking-widest  text-neutral-300 sm:rounded-tr-sm font-black text-lg rounded-2xl shadow-md shadow-gray-900/70 visible ">
+                className="peer-focus:flex animate-fadeIn [animation-duration:0.2s] hover:flex hidden fixed sm:w-auto w-full bottom-0 right-0 sm:absolute  sm:right-8 sm:top-8  z-10 flex-col  tracking-widest  text-neutral-300 sm:rounded-tr-sm font-black text-lg rounded-2xl shadow-md shadow-gray-900/70 visible ">
                     
                     {!isItDue && <>
                         <button 

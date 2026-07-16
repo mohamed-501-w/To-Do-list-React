@@ -13,7 +13,7 @@ export default function TaskInput({addTask ,date}){
 
                 <input 
                 required
-                className="peer-hover:flex-1 focus:flex-1 hover:flex-1 transition-all duration-750 ease-in-out shadow-md shadow-gray-500/50 p-3 text-neutral-900 placeholder:text-[rgb(197,30,58)] font-black tracking-widest text-lg border-2 border-[rgb(197,30,58)]  rounded-xl " 
+                className="peer-hover:flex-1 focus:flex-1 hover:flex-1 transition-all duration-750 ease-in-out shadow-md shadow-gray-500/50 p-3 text-neutral-900 dark:text-neutral-300 placeholder:text-[rgb(197,30,58)] font-black tracking-widest text-lg border-2 border-[rgb(197,30,58)]  rounded-xl " 
                 type="text"
                 name="addedTask"
                 placeholder="Add a Task"

@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@theme {
+  --animate-fadeIn: fadeIn .5s ease-in-out 1;
+  @keyframes fadeIn {
+    from {
+      scale: 0.9;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

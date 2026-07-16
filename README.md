@@ -1,8 +1,17 @@
-TaskFlow is a responsive task management application built with React and Tailwind CSS. It supports task creation, editing, completion, search, due dates, dark mode, and persistent storage using Local Storage.
+# To-Do List
 
+A React to-do app with inline editing, due dates, and persisted storage.
 
-React
-Vite
-Tailwind CSS
-Local Storage
-JavaScript (ES6+)
+## Features
+- Add, edit, and delete tasks (auto-deletes on empty save)
+- Due date tracking with overdue highlighting
+- Search/filter tasks
+- Dark mode
+- Persisted via localStorage
+- Built with React 19 form actions
+
+## Stack
+React 19 · Tailwind CSS · Vite
+
+## Live demo
+[link]

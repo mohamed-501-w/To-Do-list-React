@@ -21,19 +21,33 @@ function App() {
 
   // const [tasks, setTasks] = useState(tasksData)
   const [activeSearch, setActiveSearch] = useState("") 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+  
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+  try {
+    const savedTheme = localStorage.getItem('isDarkMode');
+    return savedTheme === 'true';
+  } catch (error) {
+    console.error("Failed to read from localStorage:", error);
+    return false;
+  }
+});
   let taskAddedIdRef = useRef(null)
   
   const date = new Date();
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [isDarkMode]);
+  try {
+    localStorage.setItem('isDarkMode', isDarkMode);
+  } catch (error) {
+    console.error("Failed to write to localStorage:", error);
+  }
+
+  if (isDarkMode) {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
+}, [isDarkMode]);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
